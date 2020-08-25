@@ -1,5 +1,3 @@
-import "./styles.css";
-
 function formatDate(date) {
   let dayIndex = date.getDay();
   let monthIndex = date.getMonth();
