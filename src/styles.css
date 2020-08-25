@@ -12,10 +12,13 @@ ul {
 li {
   list-style-type: none;
 }
-h1,
-p {
+h1 {
   text-align: center;
   padding: 20px;
+}
+p {
+  text-align: center;
+  padding: 15px;
 }
 .weather-app-wrapper {
   max-width: 600px;
@@ -28,7 +31,7 @@ p {
 .weather-app {
   background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
   border: 1px solid #dae9da;
-  padding: 15px;
+  padding: 10px;
   margin: 20px auto;
   border-radius: 10px;
   max-width: 1000px;
