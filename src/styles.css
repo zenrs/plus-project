@@ -18,6 +18,11 @@ p {
   text-align: center;
   padding: 20px;
 }
+.weather-app-wrapper,
+small {
+  max-width: 600px;
+  margin: 30px auto;
+}
 .currentCity {
   text-align: center;
   padding: 80px 10px 10px 50px;
