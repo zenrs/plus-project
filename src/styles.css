@@ -1,6 +1,5 @@
 body {
   font-family: "Raleway", sans-serif;
-  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
 }
 h2 {
   font-size: 24px;
@@ -27,6 +26,7 @@ p {
   padding: 80px 10px 10px 50px;
 }
 .weather-app {
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
   border: 1px solid #dae9da;
   padding: 15px;
   margin: 20px auto;
