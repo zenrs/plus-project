@@ -11,7 +11,7 @@ function formatDate(date) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
 
   let months = [
@@ -26,7 +26,7 @@ function formatDate(date) {
     "September",
     "October",
     "November",
-    "December"
+    "December",
   ];
 
   return `${days[dayIndex]}, ${currentDate} ${months[monthIndex]} ${currentYear}`;
