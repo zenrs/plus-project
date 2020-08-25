@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <div class="container">
+    <h1>Weather App</h1>
+        <div class="float-left" style="width: 400px;">
+          <div class="citySearch">
+      <form class="form" id="search-form">
+        <div class="row">
+        <div class="col-6">
+        <input type="search"
+        id="city"
+        placeholder="Change city here"
+        class="form-control"
+        autocomplete="off"
+        autofocus="on" 
+         />
+        </div>
+        <div class="col-3">
+        <input type="submit"
+        value="Search"
+        class="form-control btn btn-outline-secondary shadow"/>
+        </div>
+        <div class="col-3">
+        <button class="btn btn-success w-200" id="current-location-button">
+          Current
+        </button>
+      </div>
+      </div>
+      </form>
+    </div>
+    </div>
+
+    <div class="currentCity">
+        <div class="row">
+        <div class="col-sm-4">
+      <h2></h2>
+        </div>
+        <div class="col-sm-4" id="current-date">
+      <em></em>
+      </div>
+      <div class="col-sm-4" id="current-time">
+          </div>
+            </div>
+          </div>
+      <hr />
+      <p>Updated 2 minutes ago</p>
+      <div class="row">
+        <div class="col-sm-6">
+          <ul>
+            <li>
+          <span class="temperature" id="temperature"></span>
+          <a href="#" id="celsius-link">° C</a> | 
+            <a href="#" id="fahrenheit-link">° F</a>
+          </span>
+        </li> 
+          <li><span id="description"></span></li> 
+          <li>☀️</li>
+        </div>
+        <div class="col-sm-6">
+          <ul>
+            <li>Feels Like: 30°C | 83°F</li>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind"></span> km/h</li>
+          </ul>
+        </div>
+        </div>
+    
+    <hr />
+    <div class="fiveForecast">
+      <p>Friday ☀️ 8/7</p>
+      <p>Saturday ⛅️ 8/8</p>
+      <p>Sunday ☀️ 8/9</p>
+      <p>Monday ☀️ 8/10</p>
+      <p>Tuesday ☀️ 8/11</p>
+    </div>
+  </div>
+  <script src="src/index.js"></script>
+  </body>
+</html>

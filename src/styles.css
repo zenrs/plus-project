@@ -1,0 +1,38 @@
+body {
+  font-family: "Raleway", sans-serif;
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+}
+h2 {
+  font-size: 24px;
+}
+ul {
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  margin: 0;
+}
+li {
+  list-style-type: none;
+}
+h1,
+p {
+  text-align: center;
+  padding: 20px;
+}
+.currentCity {
+  text-align: center;
+  padding: 80px 10px 10px 50px;
+}
+.container {
+  border: 1px solid #dae9da;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 1000px;
+}
+.temperature {
+  font-size: 34px;
+}
+.citySearch {
+  font-weight: lighter;
+  padding: 10px;
+}
