@@ -32,6 +32,19 @@ function formatDate(date) {
   return `${days[dayIndex]}, ${currentDate} ${months[monthIndex]} ${currentYear}`;
 }
 
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
+
 let dateHeading = document.querySelector("#current-date");
 let currentTime = new Date();
 dateHeading.innerHTML = formatDate(currentTime);
@@ -76,6 +89,7 @@ function displayForecast(response) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
     <div class="col-2">
+<h3>${formatHours(forecast.dt * 1000)}</h3>
       <img
         src="http://openweathermap.org/img/wn/${
           forecast.weather[0].icon
