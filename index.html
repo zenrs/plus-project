@@ -9,10 +9,7 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
-      rel="stylesheet"
-    />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles.css"/>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
@@ -74,7 +71,16 @@
           </span>
         </li> 
           <li><span id="description"></span></li> 
-          <li>☀️</li>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong><span class="units"><a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span>
+                </div>
+              </div>
+            </div>
         </div>
         <div class="col-sm-6">
           <ul>
