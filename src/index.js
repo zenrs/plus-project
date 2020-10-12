@@ -32,6 +32,7 @@ function formatDate(date) {
   return `${days[dayIndex]}, ${currentDate} ${months[monthIndex]} ${currentYear}`;
 }
 
+//TimeStamp
 function formatHours(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -60,6 +61,7 @@ if (minutes < 10) {
 }
 timeHeading.innerHTML = `${hours}:${minutes}`;
 
+//Weather display
 function displayWeather(response) {
   console.log(response);
   document.querySelector("h2").innerHTML = response.data.name;
@@ -80,6 +82,7 @@ function displayWeather(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+//Forecast
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
@@ -106,6 +109,7 @@ function displayForecast(response) {
   }
 }
 
+//City search function
 function searchCity(city) {
   let apiKey = "70e6d6d84c4425597feba736a42e0acf";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
