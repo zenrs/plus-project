@@ -1,3 +1,5 @@
+let apiKey = "70e6d6d84c4425597feba736a42e0acf";
+
 function formatDate(date) {
   let dayIndex = date.getDay();
   let monthIndex = date.getMonth();
