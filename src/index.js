@@ -65,8 +65,9 @@ timeHeading.innerHTML = `${hours}:${minutes}`;
 function displayWeather(response) {
   console.log(response);
   document.querySelector("h2").innerHTML = response.data.name;
+ celsiusTemperature = response.data.main.temp;
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
+    celsiusTemperature
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
