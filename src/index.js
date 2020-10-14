@@ -6,6 +6,7 @@ function formatDate(date) {
   let currentYear = date.getFullYear();
   let currentDate = date.getDate();
 
+  //Days and months array
   let days = [
     "Sunday",
     "Monday",
@@ -34,7 +35,7 @@ function formatDate(date) {
   return `${days[dayIndex]}, ${currentDate} ${months[monthIndex]} ${currentYear}`;
 }
 
-//TimeStamp
+//Current time stamp
 function formatHours(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -63,7 +64,7 @@ if (minutes < 10) {
 }
 timeHeading.innerHTML = `${hours}:${minutes}`;
 
-//Weather display
+//Current weather display
 function displayWeather(response) {
   console.log(response);
   document.querySelector("h2").innerHTML = response.data.name;
@@ -85,7 +86,7 @@ function displayWeather(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-//Forecast
+//5 day Forecast
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
@@ -122,7 +123,7 @@ function searchCity(city) {
   axios.get(apiUrl).then(displayForecast);
 }
 
-//Search current location then display forecast
+//Search current location then display 5 day forecast
 function searchLocation(position) {
   let apiKey = "70e6d6d84c4425597feba736a42e0acf";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -154,6 +155,7 @@ function getCurrentLocation(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
+//Celsius conversion function
 function convertToCelsius(event) {
   event.preventDefault();
   celsiusLink.classList.remove("active");
@@ -163,6 +165,7 @@ function convertToCelsius(event) {
   );
 }
 
+//Fahrenheit conversion function
 function convertToFahrenheit(event) {
   event.preventDefault();
   celsiusLink.classList.remove("active");
@@ -175,13 +178,15 @@ function convertToFahrenheit(event) {
 
 let celsiusTemperature = null;
 
+//convert current temperature to Fahrenheit when F clicked
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
+//convert current temperature from Fahrenheit back to Celsius when C clicked
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("New York");
+searchCity("New York"); //default city
